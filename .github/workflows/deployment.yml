@@ -15,6 +15,7 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:
+    needs: test #This will not happen until the test is finished.
     runs-on: macos-latest
     steps:
       - name: Get code
